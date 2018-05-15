@@ -34,6 +34,7 @@ class PersonController < ApplicationController
       redirect_to :controller => 'actors', action: 'index'
     elsif params[:q] == 'director'
       redirect_to :controller => 'directors', action: 'index'
+    else
     end
   end
 
