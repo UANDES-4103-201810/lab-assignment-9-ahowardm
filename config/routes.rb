@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/persons', to: 'person#index'
+  get '/persons/new', to: 'person#new'
+  post '/persons', to: 'person#create'
   resources :actor_movies
   resources :movies
   resources :addresses

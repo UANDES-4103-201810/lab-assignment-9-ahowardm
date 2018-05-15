@@ -1,0 +1,31 @@
+<%= form_tag '/persons', method: :post do %>
+
+  <div class="field">
+    <%= label_tag :first_name, 'First name' %>
+    <%= text_field_tag :first_name %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :last_name, 'Last Name' %>
+    <%= text_field_tag :last_name %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :birth_date, 'Birthdate' %>
+    <%= date_field :birth_date, 'Birthdate' %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :description %>
+    <%= text_field_tag :description %>
+  </div>
+
+  <div class="field">
+    <%= check_box_tag :director, 'Director' %>
+    <%= label_tag :director, 'Director' %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag 'Save' %>
+  </div>
+<% end %>
