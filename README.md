@@ -1,3 +1,7 @@
+# Lab assignment 9 for Web Technologies class
+
+Andrés Howard
+
 # README
 
 This README would normally document whatever steps are necessary to get the
