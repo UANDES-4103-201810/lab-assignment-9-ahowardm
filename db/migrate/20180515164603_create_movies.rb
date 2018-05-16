@@ -5,8 +5,8 @@ class CreateMovies < ActiveRecord::Migration[5.2]
       t.string :description
       t.integer :duration
       t.references :director, foreign_key: true
-      t.timestamp :release_date
       t.references :address, foreign_key: true
+      t.timestamp :release_date
 
       t.timestamps
     end

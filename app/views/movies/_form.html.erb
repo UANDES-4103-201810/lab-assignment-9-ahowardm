@@ -27,18 +27,36 @@
   </div>
 
   <div class="field">
-    <%= form.label :director_id %>
-    <%= form.text_field :director_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :release_date %>
     <%= form.datetime_select :release_date %>
   </div>
 
-  <div class="field">
-    <%= form.label :address_id %>
-    <%= form.text_field :address_id %>
+  <div class="field directors">
+    <%= form.collection_select :director_id, Director.all, :id, :first_name %>
+  </div>
+
+  <div class="field address">
+    <%= fields_for @movie.address do |address_form| %>
+      <div class="field">
+        <%= address_form.label :street %>
+        <%= address_form.text_field :street %>
+      </div>
+
+      <div class="field">
+        <%= address_form.label :apartment %>
+        <%= address_form.check_box :apartment %>
+      </div>
+
+      <div class="field">
+        <%= address_form.label :description %>
+        <%= address_form.text_field :description %>
+      </div>
+
+      <div class="field">
+        <%= address_form.label :zipcode %>
+        <%= address_form.text_field :zipcode %>
+      </div>
+    <% end %>
   </div>
 
   <div class="actions">

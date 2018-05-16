@@ -1,5 +1,6 @@
 class AddressesController < ApplicationController
   before_action :set_address, only: [:show, :edit, :update, :destroy]
+  belongs_to :movie
 
   # GET /addresses
   # GET /addresses.json

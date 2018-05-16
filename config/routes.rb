@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'persons#index'
+  root 'person#index'
   get '/persons', to: 'person#index'
   get '/persons/new', to: 'person#new'
   post '/persons', to: 'person#create'
